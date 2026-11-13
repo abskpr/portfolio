@@ -1,259 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Prakash - Senior Software Engineer</title>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
-    
-    <!-- Anti-Flicker Script -->
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    </script>
-</head>
-<body class="bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100 font-sans transition-colors duration-300 antialiased">
-    
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-neutral-800">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-bold text-xl tracking-tight">AP.</div>
-            
-            <div class="flex items-center space-x-6">
-                <ul class="hidden md:flex space-x-6 text-sm font-medium">
-                    <li><a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a></li>
-                    <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a></li>
-                    <li><a href="#certifications" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Certifications</a></li>
-                </ul>
-                
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-lg text-sm p-2 transition">
-                    <!-- Moon Icon -->
-                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <!-- Sun Icon -->
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="max-w-5xl mx-auto px-6 pt-40 pb-20">
-        <h1 class="text-5xl font-extrabold mb-4 tracking-tight">Abhishek Prakash</h1>
-        <p class="text-2xl text-blue-600 dark:text-blue-400 font-semibold mb-6">Senior Software Engineer</p>
-        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 max-w-3xl">
-            Results-driven Salesforce Developer with 10+ years of total IT experience (including 9+ years specializing in enterprise Salesforce development, platform architecture, and integrations). Adept at designing scalable solutions, deprecating legacy technical debt, and enhancing system efficiency.
-        </p>
-        <div class="flex flex-wrap gap-4 text-sm font-medium">
-            <a href="mailto:prakash.abhishek9@gmail.com" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                <span class="mr-2">📧</span> prakash.abhishek9@gmail.com
-            </a>
-            <a href="https://linkedin.com/in/abskpr/" target="_blank" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                <span class="mr-2">🔗</span> linkedin.com/in/abskpr
-            </a>
-            <span class="flex items-center text-gray-700 dark:text-gray-300">
-                <span class="mr-2">📱</span> +91 9717159109
-            </span>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-800 pb-4">Professional Experience</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abhishek Prakash - Senior Software Engineer</title>
         
-        <div class="space-y-8">
-            <!-- Okta -->
-            <div class="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-neutral-800 hover:shadow-md transition">
-                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Software Engineer</h3>
-                        <p class="text-blue-600 dark:text-blue-400 font-medium text-lg">Okta | Bengaluru</p>
-                    </div>
-                    <span class="mt-2 md:mt-0 px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">
-                        Aug 2025 – Present
-                    </span>
-                </div>
-                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-                    <li>Played a key role in merging the Auth0 and Okta Salesforce communities and deprecating a legacy instance, resulting in <strong>$1M+ in cost savings</strong>. Developed case file upload features, enhanced post-creation UI/UX, and streamlined Knowledge Article data categories.</li>
-                    <li>Spearheaded the migration of <strong>hundreds of legacy Process Builders and Workflow Rules</strong> to Salesforce Flows and Apex Triggers, proactively eliminating technical debt ahead of platform deprecations.</li>
-                    <li>Remediated critical security vulnerabilities identified via Aura Inspector; executed large-scale permission reductions for Community Cloud users, modifying <strong>10,000+ field-level security settings</strong> across multiple profiles.</li>
-                    <li>Engineered the Salesforce integration for new Okta cell launches, utilizing <strong>Marketing Cloud</strong> to ensure automated Trust incident creation and reliable real-time notifications for subscribed users.</li>
-                    <li>Optimized enterprise search by integrating <strong>Coveo</strong>; consolidated multiple Salesforce data sources and migrated legacy configurations to simplify maintenance and improve data retrieval speed.</li>
-                    <li>Implemented automated testing pipelines utilizing <strong>Selenium, AWS, and AI (Claude)</strong> to accelerate testing cycles, reduce manual QA effort, and improve release quality.</li>
-                    <li>Updated Knowledge Article pages with <strong>JSON-LD</strong> targeting global SEO, optimizing content structure and metadata for AI-driven search engines.</li>
-                </ul>
-            </div>
-
-            <!-- Girikon -->
-            <div class="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-neutral-800 hover:shadow-md transition">
-                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Salesforce Consultant - Development</h3>
-                        <p class="text-blue-600 dark:text-blue-400 font-medium text-lg">Girikon | Bengaluru</p>
-                    </div>
-                    <span class="mt-2 md:mt-0 px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">
-                        June 2019 – Aug 2025
-                    </span>
-                </div>
-                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-                    <li>Engineered a <strong>data upload automation system</strong> for Choice Hotels, reducing manual data entry time by <strong>50%</strong>, enabling agents to efficiently upload and validate bulk records via an LWC-based interface.</li>
-                    <li>Led a <strong>MuleSoft-to-AWS integration migration</strong> for Choice Hotels, leveraging <strong>Platform Events</strong> to improve data processing speed and reduce API dependency.</li>
-                    <li>Partnered with QA and DevOps teams to implement <strong>CI/CD pipelines</strong> for rapid and error-free deployments of business-critical features.</li>
-                    <li>Designed and implemented a <strong>student onboarding platform</strong> for the Education Center of Australia (ECA), streamlining the enrollment process and increasing efficiency by <strong>30%</strong>.</li>
-                    <li>Implemented a <strong>HubSpot-Salesforce integration</strong>, automating lead management, improving CRM efficiency, and increasing sales conversion rates for ECA.</li>
-                    <li>Spearheaded the development of an <strong>error logging system</strong> for a startup, reducing debugging time by <strong>40%</strong> and enhancing developer productivity.</li>
-                    <li>Mentored and onboarded new team members, implementing a structured knowledge transfer process that decreased ramp-up time by <strong>25%</strong> and improved team efficiency.</li>
-                </ul>
-            </div>
-
-            <!-- Infosys -->
-            <div class="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-neutral-800 hover:shadow-md transition">
-                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Systems Engineer</h3>
-                        <p class="text-blue-600 dark:text-blue-400 font-medium text-lg">Infosys | Mysuru</p>
-                    </div>
-                    <span class="mt-2 md:mt-0 px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 text-sm font-semibold rounded-full">
-                        Aug 2016 – Jun 2019
-                    </span>
-                </div>
-                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 dark:text-gray-300 leading-relaxed">
-                    <li>Enhanced the <strong>Infosys Data Masking Tool</strong> (listed on AppExchange), implementing advanced <strong>PII data security measures</strong> and improving data compliance.</li>
-                    <li>Designed and deployed <strong>Lightning Communities</strong> for Estee Lauder Companies with custom <strong>security configurations</strong>, ensuring secure access and data visibility for different user roles.</li>
-                    <li>Led the <strong>Salesforce Classic to Lightning migration</strong>, enhancing system UI/UX and ensuring feature parity.</li>
-                    <li>Managed the <strong>localization and rollout of Salesforce Communities for 17+ countries</strong>, using <strong>Translation Workbench</strong> to provide region-specific user experiences.</li>
-                    <li>Designed and optimized <strong>Service Cloud automation workflows</strong>, implementing <strong>Entitlement Management, Case Routing, and Live Agent</strong> to enhance customer support efficiency, reducing resolution time by <strong>30%</strong>.</li>
-                    <li>Developed a <strong>Five9 CTI-based call center integration</strong>, streamlining call center operations, improving agent productivity, and reducing call handling time.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8 border-b border-gray-200 dark:border-neutral-800 pb-4">Technical Skills</h2>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Salesforce Technologies -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Salesforce Technologies</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Marketing Cloud</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">SOQL & SOSL</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Apex Classes/Triggers</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Flows</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Security & Permissions</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Sharing & Validation Rules</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Lightning Web Components (LWC)</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Platform Events</span>
-                    <span class="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-lg border border-blue-100 dark:border-blue-800/50">Batch & Scheduled Jobs</span>
-                </div>
-            </div>
-
-            <!-- Programming & Web -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Programming & Web</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-lg border border-purple-100 dark:border-purple-800/50">Java</span>
-                    <span class="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-lg border border-purple-100 dark:border-purple-800/50">Apex</span>
-                    <span class="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-lg border border-purple-100 dark:border-purple-800/50">HTML & CSS</span>
-                    <span class="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-lg border border-purple-100 dark:border-purple-800/50">JavaScript</span>
-                    <span class="px-3 py-1.5 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-lg border border-purple-100 dark:border-purple-800/50">JSON-LD</span>
-                </div>
-            </div>
-
-            <!-- Tools & Integrations -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Tools & Integrations</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">Coveo</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">Git & Bitbucket</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">VSCode</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">Jira</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">DataLoader</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">Five9</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">HubSpot</span>
-                    <span class="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-sm font-medium rounded-lg border border-green-100 dark:border-green-800/50">Copado</span>
-                </div>
-            </div>
-
-            <!-- Automation & Methodologies -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Automation & Methodologies</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-medium rounded-lg border border-amber-100 dark:border-amber-800/50">Selenium (via Claude)</span>
-                    <span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-medium rounded-lg border border-amber-100 dark:border-amber-800/50">AWS</span>
-                    <span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-medium rounded-lg border border-amber-100 dark:border-amber-800/50">Agile/Scrum</span>
-                    <span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-medium rounded-lg border border-amber-100 dark:border-amber-800/50">DevOps & CI/CD</span>
-                    <span class="px-3 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-medium rounded-lg border border-amber-100 dark:border-amber-800/50">Automated Testing</span>
-                </div>
-            </div>
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <!-- Tailwind Configuration -->
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['Inter', 'system-ui', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
+        
+        <!-- Anti-Flicker Script -->
+        <script>
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+    </head>
+    <body class="bg-neutral-50 text-neutral-900 dark:bg-black dark:text-neutral-200 font-sans antialiased selection:bg-blue-500/30">
+        
+        <!-- Background Glow Effects -->
+        <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 dark:bg-blue-900/20 blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-600/10 dark:bg-indigo-900/20 blur-[120px]"></div>
         </div>
-    </section>
 
-    <!-- Certifications & Education Section -->
-    <section id="certifications" class="max-w-5xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <!-- Certifications -->
-            <div>
-                <h2 class="text-2xl font-bold mb-6 border-b border-gray-200 dark:border-neutral-800 pb-4">Certifications</h2>
-                <ul class="space-y-3">
-                    <li><a href="https://drive.google.com/file/d/1ZH6tkB-QozJJPuZg1oJ8WGltry3zPYeG/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified AI Specialist</a></li>
-                    <li><a href="https://drive.google.com/file/d/1-RgapvkDj3nAkf7mZ-ZCWyU84bVv-_H-/view?usp=sharing" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified Administrator</a></li>
-                    <li><a href="https://drive.google.com/file/d/1TuZnLjAyLHAq5NQUGI8TQ5cgRBeyxXPZ/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified Associate</a></li>
-                    <li><a href="https://drive.google.com/file/d/1RtI15EO58hGov9kkZE8f5XPdP4EKJqH7/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified JavaScript Developer I</a></li>
-                    <li><a href="https://drive.google.com/file/d/1Jh2mNRjd8Xzzx3lZ7z39IWtpcioqQfOg/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified Platform Developer II</a></li>
-                    <li><a href="https://drive.google.com/file/d/1c9bhlkXrXFtiIHvU_2ioXgbB-kzD-kyD/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified Platform App Builder</a></li>
-                    <li><a href="https://drive.google.com/file/d/1DATD3jtgAAiVoSmuVPzzrQRL1V2wIY0s/view?usp=drive_link" target="_blank" class="text-blue-600 dark:text-blue-400 font-semibold hover:underline flex items-center"><span class="mr-2">🏆</span> Salesforce Certified Platform Developer I</a></li>
-                </ul>
-            </div>
-
-            <!-- Education -->
-            <div>
-                <h2 class="text-2xl font-bold mb-6 border-b border-gray-200 dark:border-neutral-800 pb-4">Education</h2>
+        <!-- Navigation -->
+        <nav class="fixed w-full top-0 z-50 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-neutral-200 dark:border-neutral-900 transition-colors duration-300">
+            <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-500">AP.</div>
                 
-                <div class="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-neutral-800">
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">BTech: Information Technology</h3>
-                    <p class="text-blue-600 dark:text-blue-400 font-medium">Maharaja Surajmal Institute of Technology, New Delhi</p>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2012 — 2016</p>
+                <div class="flex items-center space-x-8">
+                    <ul class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-neutral-600 dark:text-neutral-400">
+                        <li><a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a></li>
+                        <li><a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a></li>
+                        <li><a href="#certifications" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Certifications</a></li>
+                    </ul>
+                    
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" type="button" class="text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-full p-2.5 transition-all">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </nav>
 
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="mt-12 border-t border-gray-200 dark:border-neutral-800 bg-white dark:bg-black">
-        <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4 md:mb-0">© 2026 Abhishek Prakash. All rights reserved.</p>
-            <div class="flex space-x-6">
-                <a href="https://linkedin.com/in/abskpr/" target="_blank" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition">LinkedIn</a>
-                <a href="mailto:prakash.abhishek9@gmail.com" class="text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-6 pt-48 pb-32">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-6">
+                    <span class="block text-neutral-900 dark:text-white">Abhishek</span>
+                    <span class="block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-400">Prakash.</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-medium text-neutral-600 dark:text-neutral-400 mb-8">
+                    Senior Software Engineer specializing in enterprise Salesforce architecture, LWC, and scalable integrations.
+                </p>
+                
+                <div class="flex flex-wrap gap-6 text-sm font-semibold tracking-wide">
+                    <a href="mailto:prakash.abhishek9@gmail.com" class="flex items-center text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Email
+                    </a>
+                    <a href="https://linkedin.com/in/abskpr/" target="_blank" class="flex items-center text-neutral-700 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <span class="flex items-center text-neutral-500 dark:text-neutral-500">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Bengaluru, India
+                    </span>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- Main Script -->
-    <script src="assets/js/script.js"></script> 
-</body>
+        <!-- Experience Timeline -->
+        <section id="experience" class="max-w-5xl mx-auto px-6 py-20">
+            <h2 class="text-sm font-black uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-12">Professional Journey</h2>
+            
+            <div class="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 md:ml-4 space-y-16">
+                
+                <!-- Okta -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-4 h-4 bg-blue-600 rounded-full -left-[8.5px] top-1.5 ring-4 ring-white dark:ring-black group-hover:scale-125 transition-transform duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Okta</h3>
+                        <span class="text-sm font-bold tracking-wide text-blue-600 dark:text-blue-400 mt-1 md:mt-0">Aug 2025 – Present</span>
+                    </div>
+                    <p class="text-lg font-medium text-neutral-700 dark:text-neutral-300 mb-6">Senior Software Engineer</p>
+                    <ul class="space-y-3 text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Merged Auth0 and Okta Salesforce communities, deprecating legacy instances for $1M+ in cost savings.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Migrated hundreds of legacy Process Builders and Workflow Rules to Flows and Apex Triggers.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Executed large-scale permission reductions, modifying 10,000+ field-level security settings across profiles.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Engineered integration for Okta cell launches via Marketing Cloud for real-time automated Trust incidents.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Optimized enterprise search by integrating Coveo to consolidate multiple Salesforce data sources.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Implemented automated testing pipelines utilizing Selenium, AWS, and Claude AI.</li>
+                    </ul>
+                </div>
+
+                <!-- Girikon -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-4 h-4 bg-neutral-300 dark:bg-neutral-700 rounded-full -left-[8.5px] top-1.5 ring-4 ring-white dark:ring-black group-hover:bg-blue-400 transition-colors duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Girikon</h3>
+                        <span class="text-sm font-bold tracking-wide text-neutral-500 mt-1 md:mt-0">Jun 2019 – Aug 2025</span>
+                    </div>
+                    <p class="text-lg font-medium text-neutral-700 dark:text-neutral-300 mb-6">Salesforce Consultant - Development</p>
+                    <ul class="space-y-3 text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Engineered a data upload automation system for Choice Hotels via LWC, reducing manual entry by 50%.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Led a MuleSoft-to-AWS integration migration leveraging Platform Events to improve processing speed.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Designed a student onboarding platform for the Education Center of Australia, increasing efficiency by 30%.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Implemented HubSpot-Salesforce integrations to automate lead management.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Partnered with DevOps to build CI/CD pipelines for error-free feature deployments.</li>
+                    </ul>
+                </div>
+
+                <!-- Infosys -->
+                <div class="relative pl-8 md:pl-12 group">
+                    <div class="absolute w-4 h-4 bg-neutral-300 dark:bg-neutral-700 rounded-full -left-[8.5px] top-1.5 ring-4 ring-white dark:ring-black group-hover:bg-blue-400 transition-colors duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Infosys</h3>
+                        <span class="text-sm font-bold tracking-wide text-neutral-500 mt-1 md:mt-0">Aug 2016 – Jun 2019</span>
+                    </div>
+                    <p class="text-lg font-medium text-neutral-700 dark:text-neutral-300 mb-6">Senior Systems Engineer</p>
+                    <ul class="space-y-3 text-neutral-600 dark:text-neutral-400">
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Enhanced the Infosys Data Masking Tool (AppExchange) with advanced PII security measures.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Deployed Lightning Communities for Estee Lauder with complex custom security configurations.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Managed localization and rollout of Communities across 17+ countries using Translation Workbench.</li>
+                        <li class="flex items-start"><span class="mr-3 mt-1.5 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-700 rounded-full flex-shrink-0"></span>Developed a Five9 CTI-based call center integration to streamline agent productivity.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Curated Skills -->
+        <section id="skills" class="max-w-5xl mx-auto px-6 py-20">
+            <h2 class="text-sm font-black uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-12">Core Architecture & Tech Stack</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Salesforce Core -->
+                <div class="bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl dark:hover:border-neutral-700 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-4">Salesforce Platform</h3>
+                    <ul class="space-y-2 text-neutral-600 dark:text-neutral-400 font-medium">
+                        <li>Lightning Web Components (LWC)</li>
+                        <li>Apex Triggers & Architecture</li>
+                        <li>Marketing & Community Cloud</li>
+                        <li>Security, Sharing & Permissions</li>
+                    </ul>
+                </div>
+
+                <!-- Integrations -->
+                <div class="bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl dark:hover:border-neutral-700 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-4">Enterprise Integrations</h3>
+                    <ul class="space-y-2 text-neutral-600 dark:text-neutral-400 font-medium">
+                        <li>Platform Events & Event-Driven Arch</li>
+                        <li>AWS & MuleSoft Deployments</li>
+                        <li>Coveo Search Configuration</li>
+                        <li>HubSpot & Five9 CTI</li>
+                    </ul>
+                </div>
+
+                <!-- Automation -->
+                <div class="bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl dark:hover:border-neutral-700 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-4">DevOps & Automation</h3>
+                    <ul class="space-y-2 text-neutral-600 dark:text-neutral-400 font-medium">
+                        <li>CI/CD Pipeline Architecture</li>
+                        <li>Selenium & Automated Testing</li>
+                        <li>Agile / Scrum Methodologies</li>
+                        <li>Git & Version Control</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section id="certifications" class="max-w-5xl mx-auto px-6 py-20">
+            <h2 class="text-sm font-black uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-12">Credentials</h2>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="https://drive.google.com/file/d/1ZH6tkB-QozJJPuZg1oJ8WGltry3zPYeG/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    AI Specialist
+                </a>
+                <a href="https://drive.google.com/file/d/1Jh2mNRjd8Xzzx3lZ7z39IWtpcioqQfOg/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    Platform Developer II
+                </a>
+                <a href="https://drive.google.com/file/d/1DATD3jtgAAiVoSmuVPzzrQRL1V2wIY0s/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    Platform Developer I
+                </a>
+                <a href="https://drive.google.com/file/d/1c9bhlkXrXFtiIHvU_2ioXgbB-kzD-kyD/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    Platform App Builder
+                </a>
+                <a href="https://drive.google.com/file/d/1RtI15EO58hGov9kkZE8f5XPdP4EKJqH7/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    JavaScript Developer I
+                </a>
+                <a href="https://drive.google.com/file/d/1-RgapvkDj3nAkf7mZ-ZCWyU84bVv-_H-/view?usp=sharing" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    Administrator
+                </a>
+                <a href="https://drive.google.com/file/d/1TuZnLjAyLHAq5NQUGI8TQ5cgRBeyxXPZ/view?usp=drive_link" target="_blank" class="px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm font-bold text-neutral-700 dark:text-neutral-300 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                    Associate
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-neutral-200 dark:border-neutral-900 mt-12">
+            <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-neutral-500 dark:text-neutral-600 text-sm font-medium mb-4 md:mb-0">© 2026 Abhishek Prakash. BTech IT, Maharaja Surajmal Institute of Technology.</p>
+                <div class="flex space-x-6 text-sm font-bold">
+                    <a href="https://linkedin.com/in/abskpr/" target="_blank" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">LinkedIn</a>
+                    <a href="mailto:prakash.abhishek9@gmail.com" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Main Script -->
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
