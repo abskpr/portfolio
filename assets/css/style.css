@@ -1,0 +1,22 @@
+/* Ensure smooth scrolling across the entire page (replaces the inline Tailwind class) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional custom scrollbar styling to match the premium UI */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* Tailwind slate-300 */
+    border-radius: 20px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background-color: #334155; /* Tailwind slate-700 */
+}
